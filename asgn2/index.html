@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /*welcome section*/
+            .background {
+                background-image: url('image/welcome_background.jpg');
+                background-size: cover;
+                background-position: center;
+                min-height: 100vh; /* Full viewport height */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .welcome h1 {
+                font-size: 2.5em;
+                margin: 0;
+                color: black;
+            }
+
+            .welcome p {
+                font-size: 1.2em;
+                /* margin: 20px 0; */
+                color: black;
+            }
+
+            .welcome a {
+                color: black;
+                /* font-weight: bold;
+                text-decoration: none; */
+            }
+
+            .welcome a:hover {
+                 color: grey;
+            }
+
+            #slogan {
+                scroll-margin-top: 80px;
+            }
+
+            h2 {
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 2em;
+            }
+
+            .btn-explore {
+                padding: 13px 25px;
+                background-color: #fff700;
+                color: white;
+                text-decoration: none;
+                border-radius: 50px;
+                font-size: 16px;
+            }
+
+            .btn-explore:hover {
+                background-color: #e6cf00;
+            }
+
+        /*slogan section*/
+            .slogan-section {
+                padding: 60px 20px;
+                text-align: center;
+                background-color: #fff;
+            }
+
+            .slogan-section h2 {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+
+            .slogan-section p {
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+
+            .service-items {
+                display: flex;
+                justify-content: center;
+                gap: 80px;
+            }
+
+            .service-item {
+                background-color: #f4f4f4;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                width: 250px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                display: flex; /* Enables flexbox */
+                flex-direction: column; /* Stacks child elements vertically */
+                align-items: center; /* Centers items horizontally */
+                justify-content: center; /* Centers items vertically */
+                gap: 15px; /* Adds spacing between elements */
+            }
+
+            .image-wrapper {
+                width: 130px; /* Fixed width for consistency */
+                height: 130px; /* Fixed height for consistency */
+                /* overflow:visible; Ensures content exceeding the container is hidden */
+                /* border-radius: 10px; Optional: Rounded corners for aesthetics */
+                /* border: 2px solid #ddd; Adds a border */
+                display: flex; /* Enables flexbox for centering */
+                justify-content: center; /* Horizontally centers the image */
+                align-items: center; /* Vertically centers the image */
+                /* background-color: #f9f9f9; Background color */
+            }
+
+            .image-wrapper img {
+                width: 100%; /* Makes the image as wide as the wrapper */
+                height: 100%; /* Makes the image as tall as the wrapper */
+                object-fit:contain; /* Ensures the image fills the box without distortion */
+            }
+
+            .service-item h3 {
+                font-size: 24px;
+                margin: 15px 0;
+            }
+
+            .btn-view {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #ffffff;
+                color: #000;
+                text-decoration: none;
+                border-radius: 50px;
+                font-size: 14px;
+                border: 1px solid #ddd; /* Border for the button */
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .btn-view:hover {
+                background-color: #bababa;
+                color: #fff;
+            }
+
+        /*Events Journey Section*/
+            .journey {
+                /* padding: 60px 20px; */
+                background-color: #f9f9f9;
+                color: black;
+            }
+
+            .journey-content {
+                display: grid;
+                grid-template-columns: 1fr;
+                /* gap: 40px; */
+            }
+
+            .journey-top {
+                background-color: rgb(182, 223, 241);
+                padding: 40px 20px;
+                text-align: center;
+                color: black;
+            }
+
+            .journey-title {
+                font-size: 32px;
+                margin-bottom: 20px;
+                font-weight: bold;
+                color: black; /* White for the title */
+            }
+
+            .journey-description {
+                font-size: 18px;
+                color: black;
+            }
+
+            .journey-bottom {
+                background-color: #ff6600;
+                padding: 40px 20px;
+                text-align: center;
+                color: white;
+            }
+
+            .journey .event-statistics {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+
+            .journey .stat-box {
+                background-color: #ff6600;
+                padding: 20px;
+                border-radius: 5px;
+                color: white;
+                width: 180px; /* Fixed width for consistency */
+                text-align: center;
+            }
+
+            .journey .stat-number {
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+            .journey .stat-box p {
+                font-size: 16px;
+                margin-top: 10px;
+                color: white;
+            }
+
+            @media (max-width: 768px) {
+                .journey-content {
+                    grid-template-columns: 1fr; /* Stacks the content in a single column for smaller screens */
+                }
+
+                .journey .event-statistics {
+                    gap: 20px; /* Adjust the gap on smaller screens */
+                }   
+
+                .journey .stat-box {
+                    width: 120px; /* Adjust the width for smaller screens */
+                }
+            }
+            
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RassEvents & Entertainers</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="service.html">SERVICES</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!--Welcome section-->
+    <section class="background">
+        <div class="welcome">
+            <h1>&#128075; Welcome to Rass Events & Entertainers</h1>
+            <br>
+            <p>We specialize in creating unforgettable events, from birthday parties to cultural celebrations.</p>
+            <p>Explore our services and let us make your special day truly memorable.</p>
+            <br>
+            <a href="#slogan" class="btn-explore">Explore More >></a>
+        </div>
+    </section>
+
+<!--slogan section-->
+    <section class="slogan-section" id="slogan">
+        <h2>It's simple.</h2>
+        <h2>You have an event to plan and we have the solutions.</h2>
+        <p>________________</p>
+        <p>Our service....kfsbdb</p>
+
+        <div class="service-items">
+            <div class="service-item">
+                <div class="image-wrapper">
+                    <img src="image/birthday.png" alt="Birthday Service">
+                </div>
+                <h3>Birthday</h3>
+                <a href="service.html#birthday" class="btn-view">View</a>
+            </div>
+
+            <div class="service-item">
+                <div class="image-wrapper">
+                    <img src="image/cultural.png" alt="Cultural Service">
+                </div>
+                <h3>Cultural</h3>
+                <a href="service.html#cultural" class="btn-view">View</a>
+            </div>
+            
+            <div class="service-item">
+                <div class="image-wrapper">
+                    <img src="image/funeral.png" alt="Funeral Service">
+                </div>
+                <h3>Funeral</h3>
+                <a href="service.html#funeral" class="btn-view">View</a>
+            </div>
+        </div>    
+    </section>
+
+<!--Events Journey Section-->
+<section class="journey">
+    <div class="journey-content">
+        <div class="journey-top">
+            <h2 class="journey-title">Our Events Journey</h2>
+            <p class="journey-description">We have proudly organized numerous events, creating lasting memories for our clients.</p>
+        </div>
+        
+        <div class="journey-bottom">
+            <div class="event-statistics">
+                <div class="stat-box">
+                    <span class="stat-number">300+</span>
+                    <p>______</p>
+                    <p>Events</p>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">180+</span>
+                    <p>______</p>
+                    <p>Birthday Parties</p>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">55+</span>
+                    <p>______</p>
+                    <p>Cultural Events</p>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">15+</span>
+                    <p>______</p>
+                    <p>Funerals</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer>
+
+    </footer>
+
+
+</body>
+</html>

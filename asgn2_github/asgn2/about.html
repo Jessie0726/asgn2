@@ -2,14 +2,111 @@
 <html lang="en">
 <meta charset="UTF-8">
 <title>About Us</title>
+<style>
+    .companyBackground {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  padding: 20px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: var(--max-width);
+  background-image: url('image_About Background.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
 
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #04AA6D;
+}
+
+.button1:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vision, .mission, .value {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: var(--max-width);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vision {
+  flex-direction: row; 
+}
+
+.mission {
+  flex-direction: row-reverse; 
+}
+
+.value {
+  flex-direction: row; 
+}
+
+.vision img, .mission img, .value img {
+  width: 250px; 
+  height: auto;
+  border-radius: 10px;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.vision p, .mission ul, .value ul {
+  max-width: 600px;
+  line-height: 1.6;
+  text-align: left; 
+}
+</style>
 <head>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header>
-        <h1>RassEvents & Entertainers</h1>
+        <img src="image/logo.png"><h1>RassEvents & Entertainers</h1>
         <nav>
             <ul>
                 <li><a href="home.html">HOME</a></li>
@@ -21,35 +118,59 @@
         </nav>
     </header>
     <div class="companyBackground">
-        <h2>About Us</h2>
+        <h1>About Us</h1>
         <p>
             At Rassevents & Entertainers, we offer a wide range of event services designed to make every celebration
             unforgettable. Whether you're planning a fun-filled kids' birthday party, an elegant wedding, or any other
             special occasion, our team is dedicated to providing top-quality entertainment and event solutions tailored
             to your needs.
         </p>
-        <a id="vission">
+        <a id="vision">
             <button class="button button1">Explore more</button>
         </a>
     </div>
+
     <div class="parent">
-        <div class="vission">
-            <img src="image/vision.png">
-
-            <p></p>
-
+        <div class="vision">
+            <img src="image/vision.png" alt="Vision">
+            <p>To be the most trusted and sought-after provider of high-quality, affordable entertainment services for
+                children's parties, creating magical and lasting memories for families across the region.
+            </p>
         </div>
 
         <div class="mission">
-            <img src="image/mission.png">
-            <p></p>
+            <img src="image/mission.png" alt="Mission">
+            <ul>
+                <li>To deliver joyful, stress-free party experiences for parents and unforgettable moments for children
+                    by offering tailored, creative, and professional event planning services.</li>
+                <li>To provide a one-stop solution for kids' birthday celebrations with engaging clowns, colorful
+                    mascots, and diverse entertainment options at accessible price points.</li>
+                <li>To continuously innovate and enhance our offerings to meet the evolving needs of families while
+                    maintaining affordability and quality.</li>
+            </ul>
         </div>
-        
+
         <div class="value">
-            <img src="image/values.png">
-            <p></p>
+            <img src="image/values.png" alt="Values">
+            <ul>
+                <li><strong>Creativity:</strong> We bring imagination and originality to every event, ensuring that each
+                    party is unique and memorable.</li>
+                <li><strong>Customer-Centricity:</strong> Our clients' happiness is our priority, and we strive to
+                    exceed their expectations with exceptional service and attention to detail.</li>
+                <li><strong>Affordability:</strong> We believe in delivering high-quality experiences at prices that are
+                    accessible to families from all walks of life.</li>
+                <li><strong>Safety:</strong> We prioritize the safety and well-being of children and guests in every
+                    aspect of our services.</li>
+                <li><strong>Fun and Joy:</strong> Spreading happiness is at the core of what we do, creating laughter
+                    and smiles for kids and their families.</li>
+                <li><strong>Professionalism:</strong> From planning to execution, we maintain high standards of
+                    reliability, punctuality, and quality.</li>
+                <li><strong>Inclusivity:</strong> We celebrate diversity and ensure our services cater to families from
+                    all cultural and social backgrounds.</li>
+            </ul>
         </div>
     </div>
+
 </body>
 
 </html>

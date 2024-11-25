@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Services</title>
+<style>
+     #services {
+            padding: 20px;
+        }
+
+        #services h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+            max-height: 1200px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .services-list div {
+            text-align: center;
+            background: #e6f7ff;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .services-list img {
+            width: 100%;
+            max-width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .services-list:nth-child(2) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* Packages Section */
+        .packages {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .packages h2 {
+            font-family: 'Georgia', serif;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .packages-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .package {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            background: #f8f8f8;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 250px;
+        }
+
+        .package h4 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .package p {
+            font-size: 1.2em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .package ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .package ul li {
+            margin: 5px 0;
+        }
+
+        .package button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .package button:hover {
+            background-color: #0056b3;}
+    </style>
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="image/logo.png">
+        <h1>RassEvents & Entertainers</h1>
+        <nav>
+
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="service.html">SERVICES</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="services">
+        <h1>Services</h1>
+        <div class="services-list">
+            <div>
+                <img src="image/Face Painting.png" alt="Face Painting">
+                <h5>Face Painting</h5>
+            </div>
+            <div>
+                <img src="image/Mascot.png" alt="Mascot/Cosplay">
+                <h5>Mascot/Cosplay</h5>
+            </div>
+            <div>
+                <img src="image/Magic Clown Show.jpg" alt="Magic Clown Show">
+                <h5>Magic Clown Show</h5>
+            </div>
+            <div>
+                <img src="image/Candy Shop.png" alt="Popcorn & Candy Cotton">
+                <h5>Popcorn & Candy Cotton</h5>
+            </div>
+            <div>
+                <img src="image/Balloon Decoration.png" alt="Balloon Decoration">
+                <h5>Balloon Decoration</h5>
+            </div>
+        </div>
+        <div class="packages">
+            <h2>Clown Show Packages</h2>
+            <div class="packages-list">
+                <div class="package">
+                    <h4>1st Package</h4>
+                    <p>RM 750</p>
+                    <ul>
+                        <li>Amplifier with Songs & Mic</li>
+                        <li>30 Party Bags</li>
+                        <li>15 Gifts</li>
+                        <li>2 Hours Mingling Clown</li>
+                        <li>Unlimited Balloons</li>
+                        <li>4 Games for Children</li>
+                        <li>1 Game for Adults</li>
+                    </ul>
+                    <button>Book</button>
+                </div>
+                <div class="package">
+                    <h4>2nd Package</h4>
+                    <p>RM 650</p>
+                    <ul>
+                        <li>30 Party Bags</li>
+                        <li>15 Gifts</li>
+                        <li>2 Hours Mingling Clown</li>
+                        <li>Unlimited Balloons</li>
+                        <li>4 Games for Children</li>
+                        <li>1 Game for Adults</li>
+                    </ul>
+                    <button>Book</button>
+                </div>
+                <div class="package">
+                    <h4>3rd Package</h4>
+                    <p>RM 550</p>
+                    <ul>
+                        <li>15 Gifts</li>
+                        <li>2 Hours Mingling Clown</li>
+                        <li>Unlimited Balloons</li>
+                        <li>4 Games for Children</li>
+                        <li>1 Game for Adults</li>
+                    </ul>
+                    <button>Book</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
